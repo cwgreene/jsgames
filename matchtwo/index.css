@@ -1,0 +1,38 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-auto-rows: 40px;
+}
+.container {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+.tile {
+    background-color: red;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+
+    backface-visibility: hidden;
+}
+.tile-back {
+    background-color: blue;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    height: 90%;
+    width: 90%;
+}
